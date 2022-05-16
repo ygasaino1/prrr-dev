@@ -1,7 +1,9 @@
 let elem = document.querySelector('#player');
 let search = window.location.search.split('open=');
 if (search.length == 2 && search[1] != '') {
-    elem.setAttribute('src', search[1]);
+    let url_ = new URL(search[1]);
+    if (!url_.searchParams.has('enablejsapi')) { url_.searchParams.set('enablejsapi', 1) }
+    elem.setAttribute('src', url_.href);
 }
 
 if (elem.getAttribute('src') != "no-source") {
