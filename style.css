@@ -1,0 +1,53 @@
+*,
+html {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+    background-color: black;
+}
+
+#grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+}
+
+#player {
+    height: 100%;
+    width: 100%;
+    grid-area: 1, 1, 2, 1;
+    background-color: teal;
+}
+
+#vis {
+    height: 100%;
+    width: 100%;
+    grid-area: 2, 1, 3, 1;
+    background-color: gray;
+}
+
+p#back {
+    font-size: 120px;
+    color: white;
+    font-family: 'Francois One', sans-serif;
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: black;
+}
+
+p#front {
+    font-size: 120px;
+    color: white;
+    font-family: 'Francois One', sans-serif;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;
+}
