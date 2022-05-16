@@ -12,6 +12,7 @@ function onYouTubeIframeAPIReady() {
     let elem = document.querySelector('#player');
     if (search.length < 2 || search[2] == '' || elem == undefined) { return; }
 
+    elem.setAttribute(src, elem[1]);
     player = new YT.Player(elem, {
         events: {
             'onReady': onPlayerReady,
