@@ -32,9 +32,10 @@ let visual = function() {
         canvasCtx.fillStyle = 'rgb(0, 0, 0)';
         canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-        var barWidth = (HEIGHT / bufferLength);
-        var barHeight;
         var y = 0;
+        let gap = 2
+        var barWidth = ((HEIGHT - (bufferLength - 1) * gap) / bufferLength);
+        var barHeight;
 
         for (var i = 0; i < bufferLength; i++) {
             barHeight = dataArray[i];
@@ -42,7 +43,7 @@ let visual = function() {
             // canvasCtx.fillStyle = 'rgb(' + (barHeight + 100) + ',50,50)';
             canvasCtx.fillStyle = 'rgb(255, 255, 255)';
             canvasCtx.fillRect(WIDTH - barHeight, y, barHeight, barWidth);
-            y += barWidth + 1;
+            y += barWidth + gap;
         }
     };
 
