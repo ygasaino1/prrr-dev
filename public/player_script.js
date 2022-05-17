@@ -27,6 +27,20 @@ if (player_elem.getAttribute('src') != "no-source") {
     }
 
     function onPlayerReady(event) {
+        play();
+    }
+    let ended = false;
+
+    function onPlayerStateChange(event) {
+        if (event.data == 0) {
+            ended = true; // ended = yellow
+        } else if (event.data == 1 && ended == true) {
+            ended = false; // playing = green
+            play();
+        }
+    }
+
+    function play() {
         let video_id = player.getVideoData()['video_id'];
         // let audio_url = `https://prrr-001.glitch.me/ytid/${video_id}`;
         let audio_url = `https://prrr-dev.glitch.me/ytid/${video_id}`;
@@ -44,6 +58,4 @@ if (player_elem.getAttribute('src') != "no-source") {
             player.unMute();
         }, 5000);
     }
-
-    function onPlayerStateChange(event) {}
 }

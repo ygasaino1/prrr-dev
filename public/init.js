@@ -40,10 +40,9 @@ let visual = function() {
         for (var i = 0; i < bufferLength; i++) {
             barHeight = dataArray[i];
 
-            // canvasCtx.fillStyle = 'rgb(' + (barHeight + 100) + ',50,50)';
             canvasCtx.fillStyle = 'rgb(255, 255, 255)';
             canvasCtx.fillRect(WIDTH - barHeight, y, barHeight, barWidth);
-            y += barWidth + gap;
+            y += (barWidth + gap);
         }
     };
 
