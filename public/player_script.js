@@ -35,13 +35,17 @@ if (player_elem.getAttribute('src') != "no-source") {
     function onPlayerStateChange(event) {
         if (event.data == 0) {
             ended = true; // ended = yellow
+            console.log('video:end;');
         } else if (event.data == 1 && ended == true) {
             ended = false; // playing = green
             play();
+            console.log('video:replay;');
         } else if (event.data == 1) {
             player_audio.play();
+            console.log('video:resume;');
         } else if (event.data == 2) {
             player_audio.pause();
+            console.log('video:pause;');
         }
     }
 
