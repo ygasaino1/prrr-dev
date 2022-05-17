@@ -29,7 +29,7 @@ if (player_elem.getAttribute('src') != "no-source") {
     function onPlayerReady(event) {
         let video_id = player.getVideoData()['video_id'];
         // let audio_url = `https://prrr-001.glitch.me/ytid/${video_id}`;
-        let audio_url = `https://prrr-001.glitch.me/ytid/${video_id}`;
+        let audio_url = `https://prrr-dev.glitch.me/ytid/${video_id}`;
         player_audio.setAttribute('src', audio_url);
         console.log(video_id);
         player.mute();
