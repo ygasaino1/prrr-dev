@@ -38,6 +38,10 @@ if (player_elem.getAttribute('src') != "no-source") {
         } else if (event.data == 1 && ended == true) {
             ended = false; // playing = green
             play();
+        } else if (event.data == 1) {
+            player_audio.play();
+        } else if (event.data == 2) {
+            player_audio.pause();
         }
     }
 
@@ -47,9 +51,13 @@ if (player_elem.getAttribute('src') != "no-source") {
         let audio_url = `https://prrr-dev.glitch.me/ytid/${video_id}`;
         player_audio.setAttribute('src', audio_url);
         console.log(video_id);
+        //1.
         player.mute();
+        player_audio.muted = true;
+        //2.
         player.playVideo();
         player_audio.play();
+        //3.
         setTimeout(() => {
 
             player_audio.currentTime = 0;
