@@ -24,6 +24,7 @@ if (player_elem.getAttribute('src') != "no-source") {
                 'onStateChange': onPlayerStateChange
             }
         });
+        visual();
     }
 
     function onPlayerReady(event) {
@@ -50,7 +51,7 @@ if (player_elem.getAttribute('src') != "no-source") {
         player.playVideo();
         player_audio.play();
         setTimeout(() => {
-            visual();
+
             player_audio.currentTime = 0;
             player.seekTo(0);
             player_elem.style.visibility = 'visible';
