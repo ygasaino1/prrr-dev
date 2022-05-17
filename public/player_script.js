@@ -50,6 +50,7 @@ if (player_elem.getAttribute('src') != "no-source") {
         // let audio_url = `https://prrr-001.glitch.me/ytid/${video_id}`;
         let audio_url = `https://prrr-dev.glitch.me/ytid/${video_id}`;
         player_audio.setAttribute('src', audio_url);
+        player_elem.style.visibility = 'hidden';
         console.log(video_id);
         //1.
         player.mute();
