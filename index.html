@@ -12,10 +12,15 @@
 <body>
     <section id="grid">
         <iframe id="player" src="no-source" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        <script src="player_script.js"></script>
-        <div id="vis"></div>
+        <div id="vis">
+            <canvas></canvas>
+            <audio id="player_audio" src="" muted crossorigin="anonymous"></audio>
+        </div>
     </section>
+    <script src="init.js"></script>
+    <script src="player_script.js"></script>
     <script src="comment.js"></script>
+    <!-- <script src="visualizer.js"></script> -->
 </body>
 
 </html>
