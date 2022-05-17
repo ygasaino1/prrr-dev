@@ -9,11 +9,11 @@ let visual = function() {
 
     let source = audioCtx.createMediaElementSource(player_audio);
     source.connect(analyser);
-    source.connect(audioCtx.destination);
+    // source.connect(audioCtx.destination);
     // analyser.connect(distortion);
     // distortion.connect(audioCtx.destination);
 
-    analyser.fftSize = 32;
+    analyser.fftSize = 64;
     var bufferLength = analyser.frequencyBinCount;
     var dataArray = new Uint8Array(bufferLength);
 
