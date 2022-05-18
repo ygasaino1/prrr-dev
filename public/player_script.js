@@ -65,6 +65,8 @@ if (player_elem.getAttribute('src') != "no-source") {
         } else if (event.data == -1) {
             console.log('-1');
             ended = true;
+            player_elem.style.visibility = 'hidden';
+
         } else if (event.data == 5) {
             console.log('5');
         }

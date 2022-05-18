@@ -115,7 +115,7 @@ let visual = function() {
         y += (barWidth + gap);
 
         for (var i = 0; i < bufferLength; i++) {
-            if (dataArray[i] == 0) {
+            if (dataArray[i] < 50) {
                 barHeight = 0;
             } else if (dataArray[i] > 127) {
                 barHeight = 255;
