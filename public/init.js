@@ -69,7 +69,7 @@ let visual = function() {
         analyser.getByteTimeDomainData(data_wave);
 
 
-        canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+        canvasCtx.fillStyle = 'rgb(255, 0, 0)';
         canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
         var y = 0;
@@ -81,7 +81,7 @@ let visual = function() {
             if (data_freq[i] < thershold) {
                 barValue = 0;
             } else {
-                barValue = (WIDTH / 2) + (gap / 2);
+                barValue = (WIDTH / 2) - (gap / 2);
             }
 
             y += (barWidth + gap);
@@ -108,7 +108,7 @@ let visual = function() {
 
         h = h_cur * (HEIGHT * (8 / 9));
         canvasCtx.fillStyle = 'rgb(255, 255, 255)';
-        canvasCtx.fillRect(0, HEIGHT * (8 / 9) - gap, WIDTH / 2, -h);
+        canvasCtx.fillRect(0, HEIGHT * (8 / 9) - gap, WIDTH / 2 - (gap / 2), -h);
     };
 
     draw();
