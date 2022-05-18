@@ -94,8 +94,6 @@ let visual = function() {
             canvasCtx.fillRect(x1, y1, x2, y2);
         }
 
-
-
         h_cur = osc(data_wave[0]);
         if (h_cur < h_pre) {
             h_cur = h_pre + (h_cur - h_pre) * (1 - smooth);
