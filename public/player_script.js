@@ -3,7 +3,7 @@ let search = window.location.search.split('open=');
 // https://www.youtube.com/embed/videoseries?list=${}&enablejsapi=1&controls=0&loop=1
 if (search.length == 2 && search[1] != '') {
     let url_;
-    if (search[1].toLocaleLowerCase().includes('list') && !search[1].includes('list=LL')) {
+    if (search[1].toLocaleLowerCase().includes('list') && !search[1].includes('list=LL') && !search[1].toLowerCase().includes('start_radio=1')) {
         url_ = new URL(search[1]);
         let list_id_ = '';
         if (url_.searchParams.has('playlist')) { list_id_ = url_.searchParams.get('playlist') }
